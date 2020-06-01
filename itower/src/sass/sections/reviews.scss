@@ -1,0 +1,120 @@
+.reviews {
+  width: 100%;
+  @extend %flex-col;
+}
+.rewiews__titleName {
+  width: 370px;
+  @extend %flex-row;
+  align-items: center;
+}
+.arrows {
+  @extend %flex-row;
+  div {
+    margin-left: 25px;
+    transition: $transition;
+    &:hover {
+      opacity: 0.8;
+      transform: translateY(-5px);
+    }
+  }
+}
+.reviews__content {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 25px;
+  overflow: hidden;
+  @extend %flex-row;
+  @media screen and (max-width: 1600px) {
+    width: 80%;
+  }
+  @media screen and (min-width: 1919px) {
+    width: 1140px;
+  }
+  @media screen and (max-width: 1250px) {
+    width: 95%;
+  }
+}
+.reviews__content-wrap {
+  width: 100%;
+  height: 100%;
+  @extend %flex-row;
+}
+.reviews__block {
+  margin-top: 10px;
+  width: 1140px;
+  height: 155px;
+  background: url(../img/review/reviewBg.png) no-repeat;
+  background-size: cover;
+  @extend %flex-row;
+  align-items: center;
+  @media screen and (max-width: 640px) {
+    height: 170px;
+    align-items: unset;
+  }
+  @media screen and (max-width: 500px) {
+    height: 200px;
+  }
+  @media screen and (max-width: 500px) {
+    height: 250px;
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 360px) {
+    height: 280px;
+    margin-top: 20px;
+  }
+}
+.reviews__user {
+  margin-left: 23px;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+.review__textContent {
+  width: 80%;
+  height: 95px;
+  margin-left: 40px;
+  @extend %flex-col;
+  @media screen and (max-width: 900px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.review__textTitle {
+  width: 100%;
+  @extend %flex-row;
+  align-items: center;
+  justify-content: space-between;
+  .review__textUserName {
+    color: $black;
+    font-family: "Roboto-Condensed";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 21px;
+  }
+  .review__orderInfo {
+    color: $rewiewGray;
+    font-family: "Roboto Condensed";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+  }
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    text-align: center;
+    .review__textUserName {
+      margin-top: 10px;
+    }
+    .review__orderInfo {
+      margin-top: 10px;
+    }
+  }
+}
+.review__textInfo {
+  margin-top: 15px;
+  color: black;
+  font-family: "Roboto-Condensed";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+}

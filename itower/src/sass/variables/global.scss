@@ -1,0 +1,75 @@
+// position flex
+%flex-col {
+  display: flex;
+  flex-direction: column;
+}
+%flex-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+%flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.hidden {
+  display: none;
+}
+
+//colors vars
+$white: #fff;
+$black: #000;
+
+$bagroundGray:#fbfbfb;
+$lightGray: #a1a1a1;
+$strongGray: #111111;
+$middleGray: #dedede;
+$inputGray: #757575;
+$buttonBorderGray: #d7d7d7;
+$buttonTextGrey: #4e4e4e;
+$itemGrey: #4a4a4a;
+$itemDecorGray: #ebebeb;
+$titleGray: #8f8f8f;
+$newsGray: #4d4d4d;
+$dateGray:#262626;
+$rewiewGray:#adadad;
+$aboutUsGray:#2f2f2f;
+$footerGray:#303030;
+$warningGray:#b0b0b0;
+$pink: #fd005b;
+$green: #69b53b;
+$pinkOpacity:  rgba(253, 0, 91, 0.4) ;
+$grayOpacity:  rgba(77, 77, 77, 0.7) ;
+
+// button settings
+button {
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s, background-color 0.3s, border 0.3s, box-shadow 0.3s;
+  transition-timing-function: ease;
+  transition: 0.5s;
+}
+input {
+  cursor: pointer;
+  outline: none;
+}
+// transition
+$transition: 0.5s;
+$transition1s: 1s;
+
+.body {
+  width: 100%;
+  height: 100%;
+  background-color: $bagroundGray;
+  @extend %flex-col;
+  position: relative;
+}
+.salesBg {
+  position: absolute;
+  top: 3300px;
+  width: 100%;
+  height: 700px;
+  background: url(../img/seasonSalesBg.png) no-repeat;
+  background-size: cover;
+}

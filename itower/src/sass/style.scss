@@ -1,0 +1,22 @@
+// Extensions - Расширения
+@import "extensions/demo";
+
+// Variables - Переменные
+@import "variables/global.scss", "variables/fonts.scss";
+
+// Sections - Дублирующиеся раздела сайта
+@import "sections/header", 
+        "sections/menu",
+        "sections/topBanner",
+        "sections/fastNav.scss",
+        "sections/newItems.scss",
+        "sections/sales.scss",
+        "sections/brands.scss",
+        "sections/diffrences.scss",
+        "sections/lastNews.scss",
+        "sections/slider.scss",
+        "sections/reviews.scss",
+        "sections/aboutUs.scss",
+        "sections/footer.scss";
+        
+        

@@ -1,0 +1,363 @@
+.menu {
+  width: 100%;
+  height: 90px;
+  @media screen and (max-width: 900px) {
+    height: 140px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+.menu--flex {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  @extend %flex-row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  @media screen and (max-width: 1600px) {
+    width: 80%;
+  }
+  @media screen and (min-width: 1919px) {
+    width: 1140px;
+  }
+  @media screen and (max-width: 1250px) {
+    width: 96%;
+  }
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
+}
+.menu__links {
+  width: 60%;
+  @extend %flex-row;
+  justify-content: space-between;
+  @media screen and (min-width: 1919px) {
+    width: 665px;
+  }
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+  a {
+    color: $strongGray;
+    font-family: "Harmonia-Sans-Pro-Cyr";
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+}
+.menu__linkName {
+  transition: $transition;
+  &:hover {
+    color: $green;
+  }
+}
+.menu__menuButton {
+  margin-top: 10px;
+  width: 300px;
+  height: 50px;
+  background-image: linear-gradient(to right, #ff005b 0%, #29334c 100%);
+  border: none;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
+  @extend %flex-center;
+  transition: $transition;
+  &:hover {
+    background-image: linear-gradient(to right, $green 0%, #29334c 100%);
+    .menu__menuModal {
+      display: block;
+    }
+  }
+  span {
+    color: $white;
+    font-family: "Harmonia-Sans-Pro-Cyr";
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: $transition;
+  }
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+}
+.menu__menuModal {
+  width: 250px;
+  height: 200px;
+  padding-top: 20px;
+  background: $white;
+  position: absolute;
+  top: 70px;
+  z-index: 1000;
+  @extend %flex-col;
+  display: none;
+}
+.menu__menuModal--wrap{
+  width: 100%;
+  height: 100%;
+  @extend %flex-col;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+   a{
+     text-decoration: none;
+    color: $black;
+    font-family: "Harmonia-Sans-Pro-Cyr";
+    font-size: 14px;
+    font-weight: 700;
+    transition: $transition;
+   }
+}
+.menu__options {
+  width: 38%;
+  @extend %flex-row;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (min-width: 1919px) {
+    width: 440px;
+  }
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
+}
+.menu__input {
+  border: none;
+  background: none;
+  width: 140px;
+  height: 30px;
+  border-bottom: 1px solid $middleGray;
+  color: $inputGray;
+  font-family: "Harmonia-Sans-Pro-Cyr";
+  font-size: 14px;
+  font-weight: 400;
+}
+.menu__inputWrap {
+  position: relative;
+}
+.menu__inputImg {
+  position: absolute;
+  z-index: 100;
+  left: 110px;
+  top: 5px;
+}
+.menu__button {
+  width: 214px;
+  height: 43px;
+  border: 1px solid $buttonBorderGray;
+  background: $white;
+  @extend %flex-row;
+  align-items: center;
+  justify-content: space-around;
+  @media screen and (max-width: 1600px) {
+    width: 150px;
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+  p {
+    color: $buttonTextGrey;
+    font-family: "Harmonia-Sans-Pro-Cyr";
+    font-size: 14px;
+    font-weight: 400;
+  }
+  span {
+    @extend %flex-center;
+    width: 23px;
+    height: 16px;
+    background-color: $pink;
+    color: $white;
+    font-family: "Harmonia-Sans-Pro-Cyr";
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+.menu__modalButton {
+  z-index: 1000;
+  transition: $transition;
+  &:hover {
+    .menu__modalWindow {
+      display: block;
+    }
+  }
+}
+.menu__modalWindow {
+  width: 255px;
+  padding-top: 30px;
+  height: 310px;
+  position: absolute;
+  right: -120px;
+  top: 55px;
+  z-index: 1000;
+  @extend %flex-col;
+  display: none;
+  transition: $transition;
+  @media screen and (max-width: 1300px) {
+    right: 10px;
+  }
+  @media screen and (max-width: 900px) {
+    top: 100px;
+  }
+}
+.menu__modalWindow--wrap {
+  width: 100%;
+  height: 100%;
+  background: $white;
+  @extend %flex-col;
+  align-items: center;
+  span {
+    padding-top: 25px;
+    padding-bottom: 5px;
+    color: $black;
+    font-family: "Harmonia-Sans-Pro-Cyr";
+    font-size: 14px;
+    font-weight: 700;
+  }
+  ul {
+    width: 100%;
+    @extend %flex-col;
+    align-items: center;
+    li {
+      list-style-type: none;
+      margin-top: 15px;
+      a {
+        text-decoration: none;
+        color: $footerGray;
+        font-family: "Harmonia Sans Pro Cyr";
+        font-size: 14px;
+        font-weight: 400;
+        transition: $transition;
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}
+.menu__linksModal {
+  width: 100%;
+  height: 100%;
+  background: $white;
+  @extend %flex-row;
+  align-items: center;
+  justify-content: space-around;
+}
+li {
+  list-style-type: none;
+  transition: $transition;
+  &:hover {
+    a {
+      color: $green;
+    }
+    transform: translateY(-5px);
+  }
+  a {
+    color: $black;
+    font-family: "Harmonia-Sans-Pro-Cyr";
+    font-size: 14px;
+    font-weight: 700;
+    transition: $transition;
+  }
+}
+.menu__coversLink {
+  &:hover {
+    .menu__modalCovers {
+      display: block;
+    }
+  }
+}
+.menu__modalCovers {
+  width: 450px;
+  height: 100px;
+  padding-top: 30px;
+  position: absolute;
+  left: -110px;
+  top: 50px;
+  z-index: 1000;
+  display: none;
+  @extend %flex-col;
+  transition: $transition;
+  opacity: 1;
+  @media screen and (max-width: 1300px) {
+    left: 10px;
+  }
+  @media screen and (max-width: 900px) {
+  }
+}
+@media screen and (max-width: 400px) {
+  .menu__button {
+    width: 80px;
+    p {
+      display: none;
+    }
+  }
+}
+.menu__glassLink {
+  &:hover {
+    .menu__modalGlass {
+      display: block;
+    }
+  }
+}
+.menu__modalGlass {
+  width: 450px;
+  height: 100px;
+  padding-top: 30px;
+  position: absolute;
+  left: 70px;
+  top: 50px;
+  z-index: 1000;
+  display: none;
+  @extend %flex-col;
+  transition: $transition;
+  opacity: 1;
+  @media screen and (max-width: 1300px) {
+  }
+  @media screen and (max-width: 900px) {
+  }
+}
+.menu__AccessoriesLink {
+  &:hover {
+    .menu__modalAccessories {
+      display: block;
+    }
+  }
+}
+.menu__modalAccessories {
+  width: 450px;
+  height: 100px;
+  padding-top: 30px;
+  position: absolute;
+  left: 60px;
+  top: 50px;
+  z-index: 1000;
+  display: none;
+  @extend %flex-col;
+  transition: $transition;
+  opacity: 1;
+  @media screen and (max-width: 1300px) {
+  }
+  @media screen and (max-width: 900px) {
+  }
+}
+.menu__GadgetsLink {
+  &:hover {
+    .menu__modalGadgets {
+      display: block;
+    }
+  }
+}
+.menu__modalGadgets {
+  width: 450px;
+  height: 100px;
+  padding-top: 30px;
+  position: absolute;
+  left: 200px;
+  top: 50px;
+  z-index: 1000;
+  display: none;
+  @extend %flex-col;
+  transition: $transition;
+  opacity: 1;
+  @media screen and (max-width: 1300px) {
+  }
+  @media screen and (max-width: 900px) {
+  }
+}

@@ -1,0 +1,111 @@
+.topBanner {
+  width: 100%;
+  height: 510px;
+  background: url(../img/top-banner/topBannerBg.png) no-repeat;
+  background-size: auto;
+  @extend %flex-row;
+  @media screen and (min-width: 1919px) {
+    background-size: cover;
+  }
+}
+.topBanner__flex {
+  width: 60%;
+  margin: 0 auto;
+  @extend %flex-row;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 1600px) {
+    margin-left: 20%;
+    width: 70%;
+  }
+  @media screen and (min-width: 1919px) {
+    width: 1140px;
+  }
+  @media screen and (max-width: 1250px){
+    height: 450px;
+  }
+  @media screen and (max-width: 600px) {
+   width: 90%;
+   margin: 0 auto;
+  }
+}
+.top__content {
+  width: 545px;
+  @extend %flex-col;
+}
+
+.top__contentTitle {
+  color: $black;
+  font-family: "Harmonia-Sans-Pro-Cyr";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 46px;
+  @media screen and (max-width: 500px) {
+    font-size: 45px;
+   }
+}
+.top__contentDescr {
+  margin-top: 45px;
+  color: $black;
+  font-family: "Harmonia-Sans-Pro-Cyr";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.top__contentBtn {
+  margin-top: 45px;
+  width: 290px;
+  height: 63px;
+  background-image: linear-gradient(to right, #ff005b 0%, #29334c 100%);
+  border: none;
+  box-shadow: 1px 5px 5px rgba(0,0,0,0.5);
+  @extend %flex-center;
+  &:hover {
+    opacity: 0.8;
+   
+  }
+  div {
+    @extend %flex-row;
+    align-items: center;
+    span {
+      margin-left: 10px;
+      color: $white;
+      font-family: "Harmonia-Sans-Pro-Cyr";
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 46px;
+    }
+  }
+}
+.top__decorBlock {
+  position: relative;
+  @media screen and (max-width: 1250px){
+    display: none;
+  }
+}
+.top__decor1 {
+  position: absolute;
+  top: -50px;
+  left: -80px;
+}
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0, -40px,0)
+  }
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+.animated {
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+.animatedFadeInUp {
+  opacity: 0
+}
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+}

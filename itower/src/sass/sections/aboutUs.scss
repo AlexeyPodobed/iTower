@@ -1,0 +1,65 @@
+.aboutUs {
+  margin-top: 20px;
+  width: 100%;
+  height: 480px;
+  background: url(../img/aboutUs/aboutBg.png) no-repeat;
+  background-size: cover;
+  @media screen and (max-width: 900px) {
+    height: 110px;
+    background-size: auto;
+    padding-top: 20px;
+  }
+}
+.aboutUs__titleName {
+  width: 300px;
+  @extend %flex-row;
+  align-items: center;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+.aboutUs__button {
+  width: 297px;
+  height: 63px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, #ff005b 0%, #29334c 100%);
+  border: none;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
+  @extend %flex-center;
+  span {
+    color: $white;
+    font-family: "Roboto-Condensed-Bold";
+    font-size: 24px;
+    font-weight: 400;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+}
+.aboutUs__content {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 40px;
+  span {
+    color: $aboutUsGray;
+    font-family: "Roboto-Condensed";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+  }
+  @media screen and (max-width: 1600px) {
+    width: 80%;
+  }
+  @media screen and (min-width: 1919px) {
+    width: 1140px;
+  }
+  @media screen and (max-width: 1250px) {
+    width: 95%;
+  }
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}

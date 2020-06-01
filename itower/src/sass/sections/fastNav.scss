@@ -1,0 +1,144 @@
+.fastNav {
+  width: 100%;
+  height: 460px;
+  margin-top: 30px;
+  @media screen and (max-width: 900px){
+    height: 1140px;
+  }
+  @media screen and (max-width: 604px) {
+    height: 1370px;
+  }
+}
+.fastNav__wrap {
+  width: 60%;
+  @extend %flex-col;
+  margin: 0 auto;
+  @media screen and (min-width: 1600px) {
+    width: 1140px;
+  }
+  @media screen and (max-width: 1140px) {
+    width:100%;
+  }
+}
+.fast__topBlock {
+  width: 100%;
+  @extend %flex-row;
+  margin: 0 auto;
+  div {
+    background-size: cover;
+    @extend %flex-center;
+    color: $white;
+    font-family: "Roboto-Condensed";
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21px;
+    text-transform: uppercase;
+    transition: $transition;
+  }
+  @media screen and (max-width: 900px){
+    width: 604px;
+    flex-direction: column;
+  }
+  @media screen and (max-width: 604px) {
+    width:100%;
+  }
+}
+.fast__blockFlex{
+  @extend %flex-row;
+  @media screen and (max-width: 604px) {
+    flex-direction: column;
+  }
+}
+.fast__block1 {
+  width: 548px;
+  min-width: 302px;
+  height: 228px;
+  background: url(../img/fastClick/covers.png) no-repeat;
+  &:hover{
+    opacity: 0.8;
+    transform: translateY(-5px);
+}
+  @media screen and (max-width: 900px){
+    width: 604px;
+  }
+  @media screen and (max-width: 604px) {
+    width:302px;
+    margin: 0 auto;
+  }
+}
+.fast__block2 {
+  min-width: 302px;
+  height: 228px;
+  background: url(../img/fastClick/glasses.png) no-repeat;
+  &:hover{
+    opacity: 0.8;
+    transform: translateY(-5px);
+}
+}
+.fast__block3 {
+  min-width: 302px;
+  height: 228px;
+  background: url(../img/fastClick/gadgets.png) no-repeat;
+  &:hover{
+    opacity: 0.8;
+    transform: translateY(-5px);
+}
+}
+.fast__bottomBlock {
+  margin: 0 auto;
+  width: 100%;
+  @extend %flex-row;
+  div {
+    background-size: cover;
+    @extend %flex-center;
+    color: $white;
+    font-family: "Roboto-Condensed";
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21px;
+    text-transform: uppercase;
+    transition: $transition;
+  }
+  @media screen and (max-width: 900px){
+    width: 604px;
+    flex-direction: column;
+  }
+  @media screen and (max-width: 604px) {
+    width:100%;
+  }
+}
+.fast__block4 {
+  min-width: 302px;
+  height: 228px;
+  background: url(../img/fastClick/accessories.png) no-repeat;
+  &:hover{
+    opacity: 0.8;
+    transform: translateY(5px);
+}
+}
+.fast__block5 {
+  min-width: 302px;
+  height: 228px;
+  background: url(../img/fastClick/acoustic.png) no-repeat;
+  &:hover{
+    opacity: 0.8;
+    transform: translateY(5px);
+}
+}
+.fast__block6 {
+  width: 548px;
+  min-width: 302px;
+  height: 228px;
+  background: url(../img/fastClick/news.png) no-repeat;
+  &:hover{
+    opacity: 0.8;
+    transform: translateY(5px);
+}
+  @media screen and (max-width: 900px){
+    width: 604px;
+  }
+  @media screen and (max-width: 604px) {
+    width:302px;
+    margin: 0 auto;
+  }
+}

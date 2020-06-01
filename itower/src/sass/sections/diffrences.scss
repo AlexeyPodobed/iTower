@@ -1,0 +1,85 @@
+.difSection {
+  width: 100%;
+  margin-top: 140px;
+  z-index: 100;
+  @media screen and (max-width: 1010px) {
+    margin: 0;
+  }
+}
+.brands__title {
+  width: 70%;
+  height: 55px;
+  margin: 0 auto;
+  @extend %flex-row;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (max-width: 1600px) {
+    width: 90%;
+  }
+  @media screen and (min-width: 1919px) {
+    width: 1450px;
+  }
+}
+.diff__choice {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media screen and (max-width: 1600px) {
+    margin: 0 auto;
+    width: 80%;
+  }
+  @media screen and (min-width: 1919px) {
+    width: 1140px;
+  }
+  @media screen and (max-width: 1250px) {
+    width: 98%;
+  }
+  @media screen and (max-width: 510px) {
+    width: 250px;
+    margin: 0 auto;
+  }
+}
+.diff__choiceWrap {
+  @extend %flex-col;
+  align-items: center;
+  width: 250px;
+  margin-top: 30px;
+  transition: $transition;
+  &:hover {
+    .diffChoice__button {
+      opacity: 0.8;
+      transform: translateY(-5px);
+    }
+  }
+  @media screen and (max-width: 510px) {
+    margin: 0;
+    margin-top: 10px;
+  }
+}
+.diffChoice__button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: $white;
+  @extend %flex-center;
+  transition: $transition;
+ 
+}
+.diff__choiceTitle {
+  margin-top: 20px;
+  color: $itemGrey;
+  font-family: "Roboto-Condensed";
+  font-size: 16px;
+  font-weight: 700;
+}
+.diff__choiceDiscription {
+  margin-top: 20px;
+  text-align: center;
+  color: $itemGrey;
+  font-family: "Roboto-Condensed";
+  font-size: 14px;
+  font-weight: 600;
+}
